@@ -1,13 +1,18 @@
 @font-face {
   font-family: "Open Sans";
-  src: url(..fonts/OpenSans-Regular.woff2);
+  src: url('../fonts/OpenSans-Regular.ttf') format("ttf"),
+    url('../fonts/OpenSans-Regular.woff') format("woff"),
+    url('../fonts/OpenSans-Regular.woff2') format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url(..fonts/OpenSans-Bold.woff2);
+  src: url('../fonts/OpenSans-Bold.ttf') format("ttf"),
+    url('../fonts/OpenSans-Bold.woff') format("woff"),
+    url('../fonts/OpenSans-Bold.woff2') format("woff2");
+
   font-weight: 700;
   font-style: normal;
 }
@@ -19,11 +24,17 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
 }
 
+h1,
 h2,
-h3,
-p {
+h3 {
   margin: 0;
   padding: 0;
+}
+
+p {
+  margin: 0 0 15px 0;
+  padding: 0;
+
 }
 
 ul {
@@ -48,7 +59,7 @@ select {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  padding-bottom: 146px;
+  padding-bottom: 121px;
   background-image: url(../images/banner-bg.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -77,44 +88,41 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 27px 15px 0;
+  padding: 27px 18px 0;
   margin: 0 auto 100px;
 }
 
-
-
-
-.menu__list {
+.menu-list {
   display: flex;
   font-size: 13px;
 
 }
 
-.menu__items {
+.menu-items {
   display: flex;
   list-style-type: none;
 }
 
-.menu__link {
+.menu-link {
   text-decoration: none;
   color: #ffffff;
 }
 
-.menu__link:hover {
+.menu-link:hover {
   text-decoration: underline;
 }
 
-.menu__item {
+.menu-item {
   margin-left: 34px;
 }
 
-.menu__logo {
+.menu-logo {
   width: 179px;
 }
 
 .intro {
-  padding: 0 120px;
-  margin: auto;
+  padding: 0 29vw;
+  text-align: center;
 }
 
 .welcome-title {
@@ -128,7 +136,7 @@ select {
 /* Тренды */
 
 
-.trends__title {
+.trends-title {
   margin-top: 60px;
 }
 
@@ -145,7 +153,7 @@ select {
 
 
 .title::after {
-  margin: 14px auto 28px;
+  margin: 5px auto 28px;
   content: "";
   display: block;
   width: 66px;
@@ -164,8 +172,10 @@ select {
 .trend {
   position: relative;
   box-sizing: border-box;
+
   display: flex;
   align-items: end;
+  justify-content: center;
   min-height: 320px;
   width: 24.7%;
   text-transform: uppercase;
@@ -206,14 +216,14 @@ select {
 
 
 
-.trend__content {
-  padding: 34px;
-  margin: 15px;
+.trend-content {
+  padding: 32px;
+  margin: 0px 20px 16px;
   border: 3px solid #b59f5b;
 }
 
-.trend__name {
-  margin-top: 15px;
+.trend-name {
+  margin-top: 8px;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
@@ -221,12 +231,12 @@ select {
 
 }
 
-.trend__name-link {
+.trend-name-link {
   text-decoration: none;
   color: #ffffff;
 }
 
-.trend__name-link:hover {
+.trend-name-link:hover {
   color: #b59f5b;
 }
 
@@ -237,6 +247,7 @@ select {
   box-sizing: border-box;
   max-width: 1200px;
   padding: 65px 15px 0;
+  margin: 0 auto;
 
 }
 
@@ -245,16 +256,21 @@ select {
 
 .posts {
   width: 65%;
+  margin-right: 23px;
 }
 
-.post:nth-child(n + 2) {
-  margin-top: 60px;
+.post:nth-child(odd) {
+  margin-bottom: 57px;
 }
+
+.post:nth-child(even) {
+  margin-bottom: 61px;
+}
+
 
 .post {
   display: flex;
 }
-
 
 
 .post-picture {
@@ -264,18 +280,18 @@ select {
 
 }
 
-.post__content {
+.post-content {
   margin-left: 30px;
-  line-height: 0.5;
+  line-height: 0.6;
 }
 
-.post__tags {
+.post-tags {
   display: flex;
   list-style-type: none;
   padding-left: 0;
 }
 
-.post__tags-link {
+.post-tags-link {
   margin-right: 20px;
   text-decoration: none;
   font-size: 14px;
@@ -284,11 +300,11 @@ select {
   color: #b59f5b;
 }
 
-.post__tags-link:hover {
+.post-tags-link:hover {
   text-decoration: underline;
 }
 
-.post__name {
+.post-name {
   margin-top: 14px;
   margin-bottom: 30px;
   font-size: 20px;
@@ -297,21 +313,21 @@ select {
   text-transform: uppercase;
 }
 
-.post__name-link {
+.post-name-link {
   text-decoration: none;
   color: #000000;
 }
 
-.post__name-link:hover {
+.post-name-link:hover {
   color: #b59f5b;
 }
 
-.post__date {
+.post-date {
   font-size: 12px;
   color: #888888;
 }
 
-.post__author {
+.post-author {
   margin-left: 9px;
   font-size: 12px;
   font-weight: bold;
@@ -319,10 +335,10 @@ select {
   color: #000000;
 }
 
-.post__text {
+.post-text {
   margin-top: 51px;
   font-size: 15px;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 /* Aside, боковая колонка */
@@ -365,7 +381,7 @@ select {
   margin-top: 10px;
 }
 
-.new-post__name {
+.new-post-name {
   margin: 0;
   font-size: 14px;
   font-weight: bold;
@@ -373,7 +389,7 @@ select {
   line-height: 1.3;
 }
 
-.new-post__img {
+.new-post-img {
   margin-right: 18px;
   padding-top: 7px;
 }
@@ -516,12 +532,12 @@ select {
   margin-right: 5px;
 }
 
-.tag-list__link {
+.tag-list-link {
   text-decoration: none;
   color: #000000;
 }
 
-.tag-list__link:hover {
+.tag-list-link:hover {
   color: #0f0d0e;
 }
 
@@ -532,25 +548,46 @@ select {
   padding-left: 0;
 }
 
+.topics-header {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.5;
+}
+
+/* Линия под заголовком */
+
+.topics-header::after {
+  margin: 17px auto 2px;
+  content: "";
+  display: block;
+  width: 66px;
+  height: 3px;
+  background: #b59f5b;
+}
+
 .topic-list {
   padding-left: 0;
   list-style: none;
   font-size: 14px;
   font-weight: bold;
+  line-height: 1;
 }
 
 .topic-item {
   padding-bottom: 12px;
-  padding-top: 12px;
+  padding-top: 18px;
   border-bottom: 1px solid #eeeeee;
 }
 
-.topic-list__link {
+.topic-list-link {
   text-decoration: none;
   color: #000000;
 }
 
-.topic-list__link:hover {
+.topic-list-link:hover {
   color: #b59f5b;
 }
 
@@ -568,17 +605,12 @@ select {
   margin: 0 auto;
 }
 
-.products__title {
-  margin-top: 64px;
-}
-
-
 .pruduct-container {
   display: flex;
   justify-content: space-between;
 }
 
-.product__img {
+.product-img {
   min-width: 300px;
 }
 
@@ -594,15 +626,30 @@ select {
   width: 32%;
 }
 
-.product__content {
+.product-content {
   box-sizing: border-box;
-  margin-top: -30px;
-  padding: 25px 20px;
+  margin-top: -37px;
+  padding: 45px 15px 30px;
   border: 3px solid #b59f5b;
   flex-grow: 1;
 }
 
-.product__description {
+.product:not(:last-child) {
+  margin-right: 3.6vw;
+}
+
+.product:first-child {
+  margin-left: 0.9vw;
+}
+
+.product:last-child {
+  margin-right: 0.9vw;
+}
+
+
+.product-description {
+  margin-top: 5px;
+  padding-left: 5px;
   font-size: 15px;
   color: #0f0d0e;
 
@@ -618,8 +665,9 @@ select {
 }
 
 
-.product__name {
-  margin-top: 14px;
+.product-name {
+  margin-top: 4px;
+  padding-left: 5px;
   font-size: 20px;
   font-weight: bold;
   line-height: 1.2;
@@ -631,6 +679,8 @@ select {
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 25px;
+  padding-left: 5px;
+  padding-right: 8px;
 }
 
 .invalid-price {
@@ -648,7 +698,7 @@ select {
   font-weight: bold;
 }
 
-.buy__btn {
+.buy-btn {
   font-size: 14px;
   line-height: 2.8;
   text-transform: uppercase;
@@ -661,7 +711,7 @@ select {
   cursor: pointer;
 }
 
-.buy__btn:hover {
+.buy-btn:hover {
   background-color: #323232;
 }
 
@@ -682,6 +732,7 @@ select {
   justify-content: center;
   padding-top: 31px;
   padding-bottom: 32px;
+  padding-left: 28px;
   list-style: none;
 }
 
@@ -693,16 +744,16 @@ select {
   background-repeat: no-repeat;
 }
 
-.social-icon__dribbble {
+.social-icon-dribbble {
   background-image: url(../svg/001-dribbble.svg);
 }
 
-.social-icon__pinterest {
+.social-icon-pinterest {
   background-image: url(../svg/001-pinterest.svg);
 }
 
-.social-icon__twitter {
-  background-image: url(../svg/004-twitter.svg);
+.social-icon-twitter {
+  background-image: url(../svg/003-tumblr.svg);
 }
 
 .copyrights {
@@ -779,10 +830,11 @@ select {
 
 .form-field {
   box-sizing: border-box;
-  min-height: 130px;
+  height: 130px;
   width: 100%;
   padding: 20px;
   background-color: #f4f7f6;
+  resize: none;
 }
 
 .form-field:focus {
@@ -841,12 +893,13 @@ select {
 }
 
 @media (min-width: 1200px) {
-  .menu__button {
+  .menu-button {
     display: none;
   }
 
-  .post__img {
+  .post-img {
     min-width: 381px;
+    height: 295px;
   }
 }
 
@@ -855,26 +908,38 @@ select {
 /* TABLET */
 
 @media (min-width: 641px) and (max-width: 1199px) {
+
+  /* Header */
+
   .header {
     background-image: url(../images/banner-bg-tablet.jpg);
+    padding-bottom: 108px;
+  }
+
+  .menu-logo {
+    width: 158px;
+    margin-top: 18px;
+
   }
 
   .menu {
     padding-left: 35px;
     padding-right: 35px;
+    margin-bottom: 78px;
   }
 
   /* Меню-бургер */
 
 
 
-  .menu__items {
+  .menu-items {
     display: none;
   }
 
-  .menu__button {
-    width: 1.4em;
-    height: 1em;
+  .menu-button {
+    margin-top: 11px;
+    width: 24px;
+    height: 20px;
     border: none;
     padding: 0;
 
@@ -885,8 +950,8 @@ select {
     cursor: pointer;
   }
 
-  .menu__button:before,
-  .menu__button:after {
+  .menu-button:before,
+  .menu-button:after {
     content: "";
     width: 100%;
     height: 20%;
@@ -898,15 +963,15 @@ select {
     left: 0;
   }
 
-  .menu__button:before {
+  .menu-button:before {
     top: 0;
   }
 
-  .menu__button:after {
+  .menu-button:after {
     bottom: 0;
   }
 
-  .menu__button-label {
+  .menu-button-label {
     width: 100%;
     height: 20%;
     margin-top: -0.1em;
@@ -919,6 +984,14 @@ select {
     top: 50%;
   }
 
+  .intro {
+    padding: 0 10vw;
+  }
+
+  .welcome-title {
+    font-size: 40px;
+    line-height: 1.5;
+  }
 
   /* Тренды */
 
@@ -926,71 +999,168 @@ select {
     width: 49.8%;
   }
 
+  .title {
+    font-size: 18px;
+  }
+
+  .title::after {
+    margin-bottom: 22px;
+  }
+
+  .trends-title {
+    margin-top: 43px;
+  }
+
   .trend:nth-child(n+3) {
     margin-top: 4px;
   }
+
+  .trend {
+    min-height: 246px;
+    background-position: center bottom;
+  }
+
+  .trend-content {
+    padding: 30px;
+    margin: 0px 20px 16px;
+  }
+
+  .trend-name {
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.2;
+
+  }
+
 
   /* Посты */
 
   .container {
     justify-content: space-around;
+    padding-left: 33px;
+    padding-top: 50px;
+    padding-right: 32px;
+  }
+
+  .posts {
+    width: 51vw;
+    margin-right: 0px;
   }
 
   .post {
     flex-wrap: wrap;
   }
 
-  .posts {
-    width: 51vw;
+  .post:nth-child(odd) {
+    margin-bottom: 44px;
+
   }
 
-  .post__name {
-    font-size: 17px;
+  .post:nth-child(even) {
+    margin-bottom: 40px;
+
   }
 
-  .post__img {
+  .post-img {
+    height: 302px;
     width: 100%
   }
 
+  .post-name {
+    font-size: 17px;
+    margin-top: 14px;
+    margin-bottom: 35px;
+  }
 
-  .post__content {
+  .post-content {
 
     margin-left: 0;
-    margin-top: 16px;
-    padding-bottom: 19px;
+    margin-top: 17px;
+    padding-bottom: 7px;
 
   }
 
-  .post__content:not(last-child) {
+  .post-content:not(last-child) {
     border-bottom: 3px solid #eeeeee;
   }
+
+  .post-text {
+    margin-top: 34px;
+    padding-right: 25px;
+  }
+
 
   /* Aside */
 
   .sidebar {
-    margin-left: 35px;
+    margin-left: 33px;
+  }
+
+  .aside-header::after {
+    margin: 19px auto;
   }
 
   /* Магазин */
 
   .pruduct-container {
     flex-wrap: wrap;
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 20px;
+    padding-right: 10px;
+
+  }
+
+  .products-title::after {
+    margin-bottom: 30px;
 
   }
 
   .product {
     width: 45%;
+    align-content: center;
   }
 
-  .product:nth-child(1) {
-    margin-right: 5px;
+
+  .product:nth-child(odd) {
+    margin-left: 2.2vw;
+
   }
 
-  .product:nth-child(3) {
-    margin-top: 27px;
+  .product:nth-child(n+3) {
+    margin-top: 28px;
+
   }
+
+  .product-name {
+    font-size: 17px;
+    padding-left: 0;
+  }
+
+  .product-content {
+    padding-right: 8px;
+  }
+
+  .buy {
+    align-items: flex-end;
+  }
+
+  .invalid-price {
+    margin-bottom: 0;
+  }
+
+  .valid-price {
+    margin-bottom: 0;
+  }
+
+  .footer {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .socials {
+    margin: 45px auto;
+  }
+
 }
 
 
@@ -1004,7 +1174,7 @@ select {
 
   }
 
-  .trend__content {
+  .trend-content {
     flex-grow: 1;
   }
 }
@@ -1016,6 +1186,8 @@ select {
 
   .header {
     background-image: url(../images/banner-mobile.jpg);
+    background-position: center top;
+    padding-bottom: 200px;
   }
 
   .welcome-title {
@@ -1024,37 +1196,39 @@ select {
   }
 
   .intro {
-
-    padding-right: 2em;
-    padding-left: 2em;
+    padding-right: 1em;
+    padding-left: 1em;
   }
 
   .menu {
     flex-direction: column-reverse;
+    padding-top: 30px;
     padding-right: 0;
+    padding-left: 0;
     margin-bottom: 0;
   }
 
-  .menu__list {
+  .menu-list {
     align-self: flex-end;
   }
 
-  .menu__logo {
-    margin-top: 185px;
-    margin-bottom: 45px;
+  .menu-logo {
+    width: 269px;
+    margin-top: 175px;
+    margin-bottom: 25px;
   }
 
 
   /* Меню-бургер */
 
-  .menu__items {
+  .menu-items {
     display: none;
   }
 
-  .menu__button {
-    margin-right: 25px;
-    width: 1.4em;
-    height: 1em;
+  .menu-button {
+    margin-right: 16px;
+    width: 24px;
+    height: 20px;
     border: none;
     padding: 0;
 
@@ -1065,8 +1239,8 @@ select {
     cursor: pointer;
   }
 
-  .menu__button:before,
-  .menu__button:after {
+  .menu-button:before,
+  .menu-button:after {
     content: "";
     width: 100%;
     height: 20%;
@@ -1078,15 +1252,15 @@ select {
     left: 0;
   }
 
-  .menu__button:before {
+  .menu-button:before {
     top: 0;
   }
 
-  .menu__button:after {
+  .menu-button:after {
     bottom: 0;
   }
 
-  .menu__button-label {
+  .menu-button-label {
     width: 100%;
     height: 20%;
     margin-top: -0.1em;
@@ -1099,55 +1273,116 @@ select {
     top: 50%;
   }
 
+  /* Тренды */
+
   .trend {
     width: 100%;
+    min-height: 231px;
+    background-position: center bottom;
+  }
+
+
+  .title {
+    font-size: 16px;
+  }
+
+  .trends-title {
+    margin-top: 39px;
+  }
+
+  .trends-title::after {
+    margin: 5px auto 24px;
   }
 
   .trend:not(first-of-child) {
-    margin-top: 3px;
+    margin-top: 2px;
 
   }
 
-  .trend__content {
+  .trend-content {
     flex-grow: 1;
+
+    padding-left: 18px;
+    padding-top: 25px;
+    padding-bottom: 30px;
+    margin: 0px 16px 16px;
+
   }
+
+  .trend-name {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  /* Main, основной раздел */
 
   .container {
     min-width: 360px;
     flex-wrap: wrap;
+    padding-top: 45px;
   }
+
+  /* Посты */
 
   .posts {
     width: 100%;
+    margin-right: 0;
   }
 
   .post {
     flex-direction: column;
   }
 
-  .post__img {
+  .post:not(:last-child) {
+    margin-bottom: 45px;
+  }
+
+  .post:last-child {
+    margin-bottom: 0;
+  }
+
+  .post-img {
     width: 100%;
   }
 
-  post__name {
+  .post-name {
     flex-grow: 1;
+    font-size: 16px;
+    margin-bottom: 20px;
   }
 
-  .post__content {
+  .post-content {
     margin-left: 0;
-    margin-top: 16px;
+    margin-top: 10px;
+
+  }
+
+  .post-text {
+    margin-top: 21px;
+    font-size: 14px;
   }
 
   /* Aside */
 
+  .aside-header {
+    font-size: 16px;
+  }
+
   .sidebar {
     width: 100%;
     margin-left: 0;
-    margin-top: 44px;
+    margin-top: 53px;
   }
 
   .new-post {
     width: 100%;
+  }
+
+
+  /* Форма поиска */
+
+  .search {
+    margin-bottom: 45px;
   }
 
   .search-group {
@@ -1158,19 +1393,86 @@ select {
     width: 100%
   }
 
+  .search-button {
+
+    width: 54px;
+
+  }
+
+  /* Форма подписки */
+
+  .subscription-button {
+    margin-bottom: 47px;
+  }
+
+
+  /* Теги */
+
+  .tag-list {
+    justify-content: stretch;
+  }
+
+  .tag-item {
+    padding-right: 12px;
+    margin-right: 6px;
+  }
+
+  /* Топики */
+
+  .topics {
+    margin-top: 10px;
+  }
+
+  .topics-header {
+    font-size: 16px;
+  }
+
+
   /* Магазин */
+
+
+  .products {
+    margin-top: 38px;
+  }
+
 
   .pruduct-container {
     flex-direction: column;
   }
 
-  .product {
+  .pruduct-container>.product {
     width: 91vw;
     margin-left: 15px;
+
   }
 
   .product:nth-child(n+2) {
     margin-top: 25px;
+  }
+
+  .product-content {
+    padding-bottom: 25px;
+  }
+
+
+  .invalid-price {
+    margin-bottom: 0;
+  }
+
+  .valid-price {
+    margin-bottom: 0;
+  }
+
+  /* Футер */
+
+  .footer {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .socials {
+    margin-top: 40px;
+    margin-bottom: 45px;
   }
 
   /* popup */
@@ -1178,8 +1480,5 @@ select {
   .form {
     padding: 30px 24px;
     max-width: 330px;
-
   }
-
-
 }
