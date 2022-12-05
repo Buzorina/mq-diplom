@@ -1189,11 +1189,12 @@ select {
   .header {
     background-image: url(../images/banner-mobile.jpg);
     background-position: center top;
-    padding-bottom: 200px;
+    padding-bottom: 209px;
   }
 
   .welcome-title {
-    font-size: 24px;
+    font-size: 26px;
+    line-height: 1.4;
     margin-top: 0;
   }
 
@@ -1217,7 +1218,7 @@ select {
   .menu-logo {
     width: 269px;
     margin-top: 175px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
 
@@ -1305,8 +1306,8 @@ select {
     flex-grow: 1;
 
     padding-left: 18px;
-    padding-top: 25px;
-    padding-bottom: 30px;
+    padding-top: 24px;
+    padding-bottom: 28px;
     margin: 0px 16px 16px;
 
   }
@@ -1314,6 +1315,7 @@ select {
   .trend-name {
     margin-top: 8px;
     font-size: 16px;
+    line-height: 1.25;
   }
 
   /* Main, основной раздел */
@@ -1336,7 +1338,7 @@ select {
   }
 
   .post:not(:last-child) {
-    margin-bottom: 45px;
+    margin-bottom: 37px;
   }
 
   .post:last-child {
@@ -1356,12 +1358,21 @@ select {
   .post-content {
     margin-left: 0;
     margin-top: 10px;
+    padding-bottom: 7px;
 
   }
 
   .post-text {
     margin-top: 21px;
     font-size: 14px;
+  }
+
+  .pph {
+    margin-bottom: 13px;
+  }
+
+  .post-content {
+    border-bottom: 3px solid #eeeeee;
   }
 
   /* Aside */
@@ -1373,7 +1384,7 @@ select {
   .sidebar {
     width: 100%;
     margin-left: 0;
-    margin-top: 53px;
+    margin-top: 49px;
   }
 
   .new-post {
@@ -1410,12 +1421,16 @@ select {
 
   /* Теги */
 
+  .tags {
+    margin-bottom: 46px;
+  }
+
   .tag-list {
     justify-content: stretch;
   }
 
   .tag-item {
-    padding-right: 12px;
+    padding-right: 10px;
     margin-right: 6px;
   }
 
@@ -1448,12 +1463,22 @@ select {
 
   }
 
+  .product-img {
+    margin-left: 12px;
+  }
+
+
+
   .product:nth-child(n+2) {
-    margin-top: 25px;
+    margin-top: 27px;
   }
 
   .product-content {
-    padding-bottom: 25px;
+    padding-bottom: 28px;
+  }
+
+  .product-name {
+    font-size: 17px;
   }
 
 
